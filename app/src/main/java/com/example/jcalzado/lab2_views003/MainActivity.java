@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         if(checkSumar.isChecked()) {
             outString += "La suma es: " + String.valueOf(numero1+numero2);
-            result.setText(outString);
-        }else if(checkRestar.isChecked()) {
-            outString += "  La resta es: " + String.valueOf(numero1-numero2);
-            result.setText(outString);
-        } else {
-            outString = "";
-            result.setText(outString);
         }
+        if(checkRestar.isChecked()) {
+            outString += "  La resta es: " + String.valueOf(numero1-numero2);
+        }
+        if(!checkSumar.isChecked() && !checkRestar.isChecked()){
+            outString = "";
+        }
+        result.setText(outString);
     }
 }
